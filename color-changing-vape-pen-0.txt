@@ -1,0 +1,71 @@
+[name] 新●设●计1
+[puzzle] Sz010
+[production-cost] 800
+[power-usage] 655
+[lines-of-code] 18
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+...........1C.........
+......9554..35C.......
+......A....15434......
+....156....15554......
+........94.15494......
+........3555556.......
+......................
+......................
+......................
+
+[chip] 
+[type] RADIO
+[x] 2
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 9
+[y] 4
+[code] 
+  slx x1
+  mov x1 acc
+  teq acc -1
++ mov 0 p1
++ mov 0 p0
+- mov acc p1
+- mov x1 p0
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 4
+
+[chip] 
+[type] LEDRGBV
+[x] 15
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 6
+[code] 
+  tgt acc 1
++ sub 1
+- mov -1 x2
+- mov 0 p1
+  
+  mov x1 dat
+  tgt dat -1
++ mov dat p1
++ mov x1 x2
++ mov x1 x2
++ mov x1 acc
+  
+  slp 1
+

@@ -1,0 +1,68 @@
+[name] 新●设●计1
+[puzzle] Sz005
+[production-cost] 800
+[power-usage] 509
+[lines-of-code] 11
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+....8....14.154.......
+....A..1554.154..8....
+....A....14.155556....
+....3555554...........
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 2
+[code] 
+  slx x0
+  mov 0 p1
+  teq x0 1
++ tgt p0 19
++ mov 100 p1
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 3
+
+[chip] 
+[type] RTC
+[x] 5
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 4
+[code] 
+  teq p0 x3
++ mov 1 acc
+  teq p0 x2
++ mov 0 acc
+  mov acc x1
+  slp 1
+
+[chip] 
+[type] DIAL2
+[x] 14
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL1
+[x] 14
+[y] 5
+[is-puzzle-provided] true
+
