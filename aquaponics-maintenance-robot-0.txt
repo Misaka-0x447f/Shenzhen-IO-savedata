@@ -1,0 +1,131 @@
+[name] 新●设●计1
+[puzzle] Sz023
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.......94.14954.1C....
+.......A..156....A.8..
+.......A...155555756..
+....15C34.............
+......354....94...14..
+.......14.1556....14..
+......................
+......................
+......................
+
+[chip] 
+[type] NOTE
+[x] 14
+[y] 1
+[code] 
+recv timer1,timer2
+await signal
+run
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 3
+[code] 
+  mov x1 dat
+  tgt dat -1
++ mov x1 x2
++ mov x1 x2
+- jmp end
+  mov acc p0 #tmp
+  sub dat
+  tcp acc dat
++ mov 1 x0
+- mov -1 x0
+  mov acc x0
+  slx x0
+  mov 1 x2
+end: slp 1
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 3
+[code] 
+
+
+[chip] 
+[type] DX3
+[x] 17
+[y] 3
+
+[chip] 
+[type] RADIO
+[x] 2
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] NOTE
+[x] 11
+[y] 4
+[code] 
+<-----
+dat: command
+acc: current
+p0:  copy of acc
+x0 out:
+1.pos = 1 neg = -1
+2.abs(position)
+x2 out:
+1: sig move
+
+[chip] 
+[type] BRIDGE
+[x] 11
+[y] 6
+
+[chip] 
+[type] UC4
+[x] 8
+[y] 7
+[code] 
+  slx x0
+  teq 
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 7
+[code] 
+
+
+[chip] 
+[type] NOTE
+[x] 5
+[y] 9
+[code] 
+
+
+
+
+
+
+
+
+positive move ->
+
+[chip] 
+[type] NOTE
+[x] 11
+[y] 9
+[code] 
+
+
+
+
+
+
+
+
+negative move ->
+

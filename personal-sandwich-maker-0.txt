@@ -97,7 +97,6 @@ acc: cheese
   mov x1 x3
   slp 1
   mov 0 x3
-  
 
 [chip] 
 [type] DX3
